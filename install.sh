@@ -44,6 +44,7 @@ tightvncserver -geometry 1280x720 #This will run through the setup process & sta
 #Auto start with cron, systemd seems to have issues.
 sudo crontab -l > cur.cron #save cron file
 sudo echo "@reboot su - j -c '/usr/bin/tightvncserver -geometry 1280x720'" >> cur.cron #add new command
+# YOUR USERNAME HERE -> ^ (mine is j)
 sudo crontab cur.cron #install new cron file
 
 sudo rm cur.cron
