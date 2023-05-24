@@ -7,9 +7,9 @@
 echo "Updating and installing packages..."
 sudo apt update -y && sudo apt upgrade -y
 
-sudo apt install -y git curl neofetch htop tightvncserver cmake libusb-1.0-0-dev build-essential gqrx-sdr nodejs npm dkms raspberrypi-kernel-headers jq gpsd gpsd-clients rclone
+sudo apt install -y git curl neofetch htop tightvncserver cmake libusb-1.0-0-dev build-essential gqrx-sdr nodejs npm dkms raspberrypi-kernel-headers jq gpsd gpsd-clients rclone clang
 
-curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-armhf.deb && sudo dpkg -i cloudflared.deb
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb && sudo dpkg -i cloudflared.deb
 
 rm cloudflare.deb
 #Will need to run the install command to link to account and setup SSH and VNC tunnels
